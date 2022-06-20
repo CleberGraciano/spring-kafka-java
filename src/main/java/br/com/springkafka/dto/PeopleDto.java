@@ -1,4 +1,4 @@
-package br.com.springkafka.controlers;
+package br.com.springkafka.dto;
 
 import lombok.Getter;
 

@@ -1,6 +1,7 @@
 package br.com.springkafka.controlers;
 
 import br.com.springkafka.People;
+import br.com.springkafka.dto.PeopleDto;
 import br.com.springkafka.producer.PeopleProducer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
