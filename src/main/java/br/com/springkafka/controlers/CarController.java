@@ -6,6 +6,8 @@ import br.com.springkafka.producer.CarProducer;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,7 +20,8 @@ public class CarController {
 
     private final CarProducer carProducer;
 
-    private ResponseEntity<CarDto> sendMessage(CarDto carDto) {
+    @PostMapping
+    private ResponseEntity<CarDto> sendMessage(@RequestBody CarDto carDto) {
         var id = UUID.randomUUID().toString();
 
         var message = Car.newBuilder()
