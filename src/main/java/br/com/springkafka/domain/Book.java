@@ -1,5 +1,9 @@
 package br.com.springkafka.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.Entity;
@@ -8,6 +12,10 @@ import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 @Entity
+@Builder
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Book {
 
     @Id
